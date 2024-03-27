@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   mariadb-server:
+    container_name: mariadb-server
     image: mariadb:latest
     hostname: mariadb-server
     environment:
@@ -21,6 +22,7 @@ services:
     restart: always
 
   code-server:
+    container_name: code-server
     image: codercom/code-server:latest
     hostname: code-server
     ports:
@@ -34,6 +36,7 @@ services:
     restart: unless-stopped
 
   cloudbeaver:
+    container_name: cloudbeaver
     hostname: cloudbeaver
     image: dbeaver/cloudbeaver
     ports:
