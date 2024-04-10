@@ -1,5 +1,9 @@
 CREATE USER dev@'%' IDENTIFIED BY 'DevPassword123!';
+
 CREATE USER dev@'192.168.1.%' IDENTIFIED BY 'DevPassword123!';
+
 DROP USER dev@'192.168.1.%';
+
 CREATE DATABASE todo;
+
 GRANT ALL PRIVILEGES ON todo.* TO dev@'%';
