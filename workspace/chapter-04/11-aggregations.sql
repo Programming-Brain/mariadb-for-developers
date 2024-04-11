@@ -1,7 +1,7 @@
 INSERT INTO users (name, password) VALUES 
 ('Cee Sharp', 'dotnet789'),
 ('Harry Scripter', 'magicMethods'),
-('Sally SQL', 'joinTheFun'),
+('Sally Sequel', 'joinTheFun'),
 ('Rick Rollback', 'neverGonnaCommitYouUp');
 
 INSERT INTO items (user_id, description) VALUES
