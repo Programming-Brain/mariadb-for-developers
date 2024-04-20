@@ -23,11 +23,11 @@ CREATE TEMPORARY TABLE temp2 LIKE some_table;
 SHOW TABLES IN todo;
 
 ALTER TABLE some_table
-  ADD COLUMN col3 INT;
+    ADD COLUMN col3 INT;
 
 ALTER TABLE some_table
-  ADD COLUMN col4 INT,
-  ADD COLUMN col5 INT;
+    ADD COLUMN col4 INT,
+    ADD COLUMN col5 INT;
 
 ALTER TABLE some_table MODIFY COLUMN col5 TEXT;
 
@@ -40,6 +40,6 @@ RENAME TABLE some_table2 TO some_table_too;
 DROP TABLE some_table_too;
 
 DROP TABLE
-  some_table,
-  another_table,
-  yet_another_table;
+    some_table,
+    another_table,
+    yet_another_table;

@@ -1,9 +1,9 @@
 INSERT INTO items
 VALUES
-  ('Turn bugs into "features"'),
-  ("Refactor lunch plans"),
-  ("Fork the kitchen"),
-  ("Fork the kitchen");
+    ('Turn bugs into "features"'),
+    ("Refactor lunch plans"),
+    ("Fork the kitchen"),
+    ("Fork the kitchen");
 
 UPDATE items
 SET description = "Automate kitchen cleanup"

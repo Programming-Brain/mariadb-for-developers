@@ -1,5 +1,5 @@
 CREATE TABLE items(
-  description TEXT
+    description TEXT
 );
 
 INSERT INTO items(description)
