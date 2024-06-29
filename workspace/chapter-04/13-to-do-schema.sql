@@ -14,8 +14,7 @@ CREATE TABLE items (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     description VARCHAR(250),
     user_id INT NOT NULL,
-    FOREIGN KEY fk_items_user_id (user_id),
-    CONSTRAINT fk_items_user_id FOREIGN KEY (user_id)REFERENCES users (id)
+    FOREIGN KEY fk_items_user_id (user_id) REFERENCES users (id)
 );
 
 INSERT INTO users(id, name, password) VALUES

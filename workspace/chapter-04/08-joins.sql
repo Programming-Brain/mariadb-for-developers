@@ -4,11 +4,11 @@ SELECT name, description FROM items; -- error
 
 SELECT name, description FROM items, users;
 
-SELECT name, description, user_id, users.id FROM items, users;
+SELECT name, description, user_id, users.id
+FROM items, users;
 
 SELECT name, description, user_id, users.id
-FROM items
-JOIN users ON users.id = items.user_id
+FROM items, users
 WHERE user_id = users.id;
 
 SELECT name, description
