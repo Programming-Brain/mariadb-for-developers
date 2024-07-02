@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mariadb-server:
     container_name: mariadb-server
-    image: mariadb:11.4
+    image: mariadb:latest
     hostname: mariadb-server
     environment:
       MARIADB_ROOT_PASSWORD: RootPassword123!
