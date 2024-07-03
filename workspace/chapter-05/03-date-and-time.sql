@@ -70,3 +70,9 @@ JOIN users u ON u.id = i.user_id
 WHERE i.status = "IN_PROGRESS"
 AND u.id = 2
 ORDER BY i.created_at;
+
+SELECT DATE_FORMAT("2024-07-03", "%W %M %Y") AS "When?";
+
+SELECT DATE_FORMAT("2024-07-03", "%W %M %Y", "es_CO") AS "¿Cuándo?";
+
+SELECT STR_TO_DATE("Wednesday July 2024", "%W %M %Y") AS "Date";
