@@ -36,7 +36,7 @@ CREATE TABLE items(
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     completed_at DATETIME,
     status ENUM ("IN_PROGRESS", "DONE"),
-    priority BOOLEAN NOT NULL DEFAULT FALSE,
+    high_priority BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY pk_items (id),
     FOREIGN KEY fk_items_user_id (user_id) REFERENCES users (id),
     FOREIGN KEY fk_items_project_id (project_id) REFERENCES projects (id),
@@ -193,7 +193,7 @@ INSERT INTO winners (user_id, prize_id, awarded_date) VALUES
 (6, 8, '2024-03-20'),
 (30, 14, '2024-04-18');
 
-INSERT INTO items (user_id, project_id, description, due_date, created_at, completed_at, status, priority) VALUES
+INSERT INTO items (user_id, project_id, description, due_date, created_at, completed_at, status, high_priority) VALUES
 (31, 1, 'Develop API endpoints', '2024-09-18', '2024-02-19 00:00:00', NULL, 'IN_PROGRESS', FALSE),
 (9, 18, 'Refactor database schema', '2024-03-22', '2024-03-13 00:00:00', '2024-03-26 00:00:00', 'DONE', TRUE),
 (18, 16, 'Migrate to microservices architecture', '2024-05-01', '2024-01-14 00:00:00', NULL, 'IN_PROGRESS', FALSE),
@@ -205,7 +205,7 @@ INSERT INTO items (user_id, project_id, description, due_date, created_at, compl
 (43, 13, 'Implement OAuth2 authentication', '2024-08-09', '2023-12-20 00:00:00', NULL, 'IN_PROGRESS', FALSE),
 (12, 15, 'Implement OAuth2 authentication', '2024-07-15', '2024-03-03 00:00:00', NULL, 'IN_PROGRESS', FALSE),
 (26, 9, 'Develop API endpoints', '2024-07-14', '2024-02-29 00:00:00', NULL, 'IN_PROGRESS', TRUE),
-(46, 17, 'Enhance cybersecurity measures', '2024-09-24', '2024-03-05 00:00:00', NULL, 'IN_PROGRESS', FALSE),
+(46, 17, 'Urgent! Enhance cybersecurity measures', '2024-09-24', '2024-03-05 00:00:00', NULL, 'IN_PROGRESS', FALSE),
 (9, 8, 'Migrate to microservices architecture', '2024-05-16', '2023-11-18 00:00:00', NULL, 'IN_PROGRESS', FALSE),
 (3, 8, 'Migrate to microservices architecture', '2024-07-23', '2023-11-10 00:00:00', NULL, 'IN_PROGRESS', FALSE),
 (27, 13, 'Upgrade server hardware', '2024-04-02', '2024-03-26 00:00:00', '2024-04-12 00:00:00', 'DONE', FALSE),
@@ -392,7 +392,7 @@ INSERT INTO items (user_id, project_id, description, due_date, created_at, compl
 (29, 19, 'Optimize network throughput', '2024-02-24', '2024-02-14 00:00:00', '2024-02-25 00:00:00', 'DONE', FALSE),
 (26, 3, 'Design user interface for mobile app', '2024-02-13', '2024-02-03 00:00:00', '2024-02-22 00:00:00', 'DONE', FALSE),
 (20, 14, 'Refactor database schema', '2024-03-05', '2024-02-27 00:00:00', '2024-03-10 00:00:00', 'DONE', FALSE),
-(37, 7, 'Implement OAuth2 authentication', '2024-03-29', '2024-03-19 00:00:00', '2024-04-05 00:00:00', 'DONE', FALSE),
+(37, 7, '(urgent) Implement OAuth2 authentication', '2024-03-29', '2024-03-19 00:00:00', '2024-04-05 00:00:00', 'DONE', FALSE),
 (9, 17, 'Refactor database schema', '2023-12-31', '2023-12-03 00:00:00', '2024-01-02 00:00:00', 'DONE', TRUE),
 (6, 18, 'Migrate to microservices architecture', '2024-07-21', '2024-03-01 00:00:00', NULL, 'IN_PROGRESS', FALSE),
 (41, 9, 'Refactor database schema', '2023-12-10', '2023-11-13 00:00:00', '2023-12-25 00:00:00', 'DONE', FALSE),
@@ -421,3 +421,24 @@ INSERT INTO items (user_id, project_id, description, due_date, created_at, compl
 (7, 17, 'Upgrade server hardware', '2024-01-18', '2024-01-11 00:00:00', '2024-01-25 00:00:00', 'DONE', FALSE),
 (50, 12, 'Migrate to microservices architecture', '2024-08-29', '2024-01-21 00:00:00', NULL, 'IN_PROGRESS', TRUE),
 (39, 16, 'Optimize network throughput', '2024-09-17', '2023-10-31 00:00:00', NULL, 'IN_PROGRESS', FALSE);
+
+INSERT INTO items_tags (item_id, tag_id) VALUES
+(77, 4),
+(123, 3),
+(63, 5),
+(97, 1),
+(100, 5),
+(110, 4),
+(72, 2),
+(98, 5),
+(162, 3),
+(176, 1), (176, 3), (176, 4),
+(178, 4), (178, 3), (178, 5),
+(179, 1), (179, 4), (179, 5),
+(186, 1), (186, 2),
+(199, 4),
+(224, 3),
+(208, 1),
+(220, 1),
+(219, 4),
+(207, 1);

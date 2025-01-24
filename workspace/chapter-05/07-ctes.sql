@@ -1,0 +1,13 @@
+SELECT 1 AS i
+UNION
+SELECT 2
+UNION
+SELECT 3;
+
+WITH RECURSIVE numbers AS(
+	SELECT 1 AS i
+	UNION
+	SELECT i + 1 FROM numbers WHERE i < 3
+)
+SELECT i
+FROM numbers;

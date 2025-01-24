@@ -8,3 +8,4 @@ install-extension cweijan.vscode-database-client2
 # Install tools
 apt-get update
 apt-get install -y mariadb-client
+apt-get install -y iputils-ping
