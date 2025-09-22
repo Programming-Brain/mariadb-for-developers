@@ -27,6 +27,14 @@ JOIN users on users.id = user_id
 GROUP BY user_id
 HAVING Tasks > 1
 ORDER BY Tasks ASC
+LIMIT 3;
+
+SELECT name AS Employee, COUNT(*) AS Tasks
+FROM items
+JOIN users on users.id = user_id
+GROUP BY user_id
+HAVING Tasks > 1
+ORDER BY Tasks ASC
 OFFSET 0 ROWS FETCH FIRST 3 ROWS ONLY;
 
 SELECT name AS Employee, COUNT(*) AS Tasks

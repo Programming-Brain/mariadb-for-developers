@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   mariadb-server:
     container_name: mariadb-server
@@ -29,7 +27,6 @@ services:
     ports:
       - "3333:8443"
     environment:
-      - PASSWORD=CodePassword123!
       - DEFAULT_WORKSPACE=/home/workspace
     volumes:
       - ./../workspace:/home/workspace

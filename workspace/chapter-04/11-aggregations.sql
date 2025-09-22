@@ -11,15 +11,15 @@ INSERT INTO items (user_id, description) VALUES
     (2, 'Reboot the refrigerator'),
     (3, 'Ping the pizza delivery'),
     (3, 'Commit to gym'),
-    (5, 'Merge breakfast and lunch'),
-    (5, 'Rollback bedtime'),
-    (6, 'Checkout the weekend'),
-    (7, 'Push code to production on Friday'),
-    (7, 'Pull request for vacation'),
-    (8, 'Branch out hobbies'),
-    (8, 'Archive old emails'),
-    (8, 'Fetch coffee'),
-    (8, 'Stash snacks in desk');
+    (6, 'Merge breakfast and lunch'),
+    (6, 'Rollback bedtime'),
+    (7, 'Checkout the weekend'),
+    (8, 'Push code to production on Friday'),
+    (8, 'Pull request for vacation'),
+    (9, 'Branch out hobbies'),
+    (9, 'Archive old emails'),
+    (9, 'Fetch coffee'),
+    (9, 'Stash snacks in desk');
 
 SELECT COUNT(*) FROM items;
 

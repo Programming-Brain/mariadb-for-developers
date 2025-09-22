@@ -7,7 +7,7 @@ SELECT 3;
 WITH RECURSIVE numbers AS(
 	SELECT 1 AS i
 	UNION
-	SELECT i + 1 FROM numbers WHERE i < 3
+	SELECT i + 1 FROM numbers WHERE i < 600
 )
 SELECT i
 FROM numbers;

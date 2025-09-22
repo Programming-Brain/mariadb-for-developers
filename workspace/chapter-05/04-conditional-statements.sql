@@ -16,8 +16,10 @@ WHERE status = "IN_PROGRESS" AND u.id = 5;
 SELECT
 	i.id AS id,
 	i.description AS description,
-    i.due_date AS due_date,
-	IF(due_date <= NOW() + INTERVAL 3 DAY, 1, i.high_priority) AS "high_priority"
+	i.due_date AS due_date,
+	IF(i.`high_priority`
+		OR i.due_date <= NOW() + INTERVAL 3 DAY,
+			1, i.high_priority) AS "high_priority"
 FROM users u
 JOIN items i ON i.user_id = u.id
 WHERE status = "IN_PROGRESS" AND u.id = 5;
@@ -25,8 +27,10 @@ WHERE status = "IN_PROGRESS" AND u.id = 5;
 SELECT
 	i.id AS id,
 	i.description AS description,
-    i.due_date AS due_date,
-	IF(i.due_date <= "2024-06-07" + INTERVAL 3 DAY, 1, i.high_priority) AS "high_priority" -- hardcoded NOW for testing
+	i.due_date AS due_date,
+	IF(i.`high_priority`
+		OR i.due_date <= "2024-06-07" + INTERVAL 3 DAY,
+			1, i.high_priority) AS "high_priority" -- hardcoded NOW for testing
 FROM users u
 JOIN items i ON i.user_id = u.id
 WHERE status = "IN_PROGRESS" AND u.id = 5;

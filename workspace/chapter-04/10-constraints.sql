@@ -7,12 +7,16 @@ MODIFY COLUMN user_id INT NOT NULL;
 
 INSERT INTO users(name, password) VALUES(NULL, "pass"); -- error
 
+DESC users;
+
+DESC items;
+
 INSERT INTO users(name, password) VALUES("", "pass");
 
 DELETE FROM users WHERE name = "";
 
 ALTER TABLE users
-ADD CONSTRAINT users_name_not_empty CHECK (TRIM(name) <> "");
+ADD CONSTRAINT users_name_not_empty CHECK (TRIM(name) != "");
 
 INSERT INTO users(name, password) VALUES("  ", "pass"); -- error
 

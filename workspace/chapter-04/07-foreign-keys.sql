@@ -22,6 +22,8 @@ VALUES("Use the rubber duck", 999); -- error
 INSERT INTO items(description, user_id)
 VALUES("Use the rubber duck", 1);
 
+SELECT * FROM items;
+
 UPDATE items SET user_id = 1 WHERE id = 1;
 UPDATE items SET user_id = 2 WHERE id = 2;
 UPDATE items SET user_id = 3 WHERE id = 3;

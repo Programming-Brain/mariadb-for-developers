@@ -42,4 +42,5 @@ DROP TABLE some_table_too;
 DROP TABLE
     some_table,
     another_table,
-    yet_another_table;
+    yet_another_table,
+    some_table_too;

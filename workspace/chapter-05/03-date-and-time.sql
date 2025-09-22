@@ -19,15 +19,19 @@ ORDER BY i.due_date, u.name;
 SELECT i.id, u.name, i.description, i.due_date
 FROM items i
 JOIN users u ON u.id = i.user_id
-WHERE '2024-06-08 00:44:12' > i.due_date AND i.id = 134 -- hardcoded "NOW()" for simulating
+WHERE '2024-06-08 00:44:12' > i.due_date AND i.id = 134 -- hardcoded "NOW()" for simulating wrong result
 ORDER BY i.due_date, u.name;
 
 SELECT NOW();
 
+SELECT @@time_zone;
+
+SELECT @@system_time_zone;
+
 SELECT i.id, u.name, i.description, i.due_date
 FROM items i
 JOIN users u ON u.id = i.user_id
-WHERE '2024-06-07' > i.due_date -- hardcoded "client date" for simulating
+WHERE '2024-06-07' > i.due_date -- hardcoded "client date" for simulating correct result
 ORDER BY i.due_date, u.name;
 
 SELECT CONVERT_TZ("2024-06-29 20:00", "+3:00", "-5:00") AS 'Colombian time';
