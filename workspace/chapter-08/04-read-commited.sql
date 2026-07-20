@@ -1,0 +1,13 @@
+-- session 2
+UPDATE t SET c = "A" WHERE id = 1;
+
+-- session 1
+SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+START TRANSACTION;
+SELECT c FROM t WHERE id = 1;
+
+-- session 2
+UPDATE t SET c = "Z" WHERE id = 1;
+
+-- session 1
+SELECT c FROM t WHERE id = 1;
