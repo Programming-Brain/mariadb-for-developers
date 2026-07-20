@@ -1,4 +1,4 @@
-INSERT INTO users (name, password) VALUES 
+INSERT INTO users (name, password) VALUES
     ('Cee Sharp', 'dotnet789'),
     ('Harry Scripter', 'magicMethods'),
     ('Sally Sequel', 'joinTheFun'),
@@ -20,6 +20,10 @@ INSERT INTO items (user_id, description) VALUES
     (9, 'Archive old emails'),
     (9, 'Fetch coffee'),
     (9, 'Stash snacks in desk');
+
+SELECT * FROM users;
+
+SELECT * FROM items;
 
 SELECT COUNT(*) FROM items;
 

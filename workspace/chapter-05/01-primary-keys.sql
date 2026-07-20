@@ -18,8 +18,7 @@ ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY;
 
 SELECT * FROM items;
 
-INSERT INTO items(description)
-VALUES("Sprint for coffee");
+INSERT INTO items(description) VALUES("Sprint for coffee");
 
 SELECT * FROM items;
 

@@ -1,0 +1,1 @@
+SELECT "It works!" as "message";

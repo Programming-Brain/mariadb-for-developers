@@ -29,4 +29,6 @@ UPDATE items SET user_id = 2 WHERE id = 2;
 UPDATE items SET user_id = 3 WHERE id = 3;
 UPDATE items SET user_id = 3 WHERE id = 4;
 
+SELECT * FROM items;
+
 SELECT description FROM items WHERE user_id = 1;
