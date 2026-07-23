@@ -1,0 +1,7 @@
+ALTER TABLE items ALTER INDEX idx_items_created_id IGNORED;
+
+ALTER TABLE items ALTER INDEX idx_items_created_id NOT IGNORED;
+
+SELECT * FROM items
+WHERE status = 'DONE'
+LIMIT ROWS EXAMINED 50000;

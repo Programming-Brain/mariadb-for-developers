@@ -2,6 +2,7 @@
 server_id =  1
 log_bin = true
 bind_address = 0.0.0.0
+performance_schema = ON
 
 [mariadb-client]
 pager = pspg -s 14 -X --force-uniborder --quit-if-one-screen
