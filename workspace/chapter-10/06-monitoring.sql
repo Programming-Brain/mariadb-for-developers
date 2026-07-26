@@ -4,6 +4,8 @@ SHOW GLOBAL STATUS
 WHERE Variable_name IN
     ('Threads_connected', 'Threads_running', 'Slow_queries');
 
+SELECT @@max_connections;
+
 SHOW GLOBAL STATUS
 WHERE Variable_name IN(
     'Innodb_buffer_pool_reads',
